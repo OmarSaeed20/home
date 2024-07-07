@@ -38,7 +38,7 @@ class NewAppAppPages {
     ),
     GetPage(
       name: NewAppRoutes.main,
-      page: () => const MyCustomUI(),
+      page: () => const NewAppMainView(),
       bindings: [NewAppChooseLanguageBinding(), NewAppMainBinding()],
       transition: Transition.fadeIn,
     ),

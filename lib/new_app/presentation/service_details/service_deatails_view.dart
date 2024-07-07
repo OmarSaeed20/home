@@ -180,9 +180,6 @@ class _ServiceDetailsViewState extends State<ServiceDetailsView> {
                           color: KColors.cirBlueBg,
                         ),
                         10.sW,
-                        // const Icon(Icons.business, color: KColors.cirBlueBg),
-                        // 10.sW,
-
                         TextWidget(
                           service.nameAr.translateDatabase(service.nameEn),
                           style: HomeTxStyle.gStyle24.copyWith(

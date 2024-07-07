@@ -155,17 +155,19 @@ class ListServiceData extends StatelessWidget {
                   ),
                 ),
               ),
-              TextWidget(
-                service.nameAr.translateDatabase(service.nameEn),
-                maxLines: 2,
-                softWrap: true,
-                // padding: 4.padTop,
-                overflow: TextOverflow.ellipsis,
-                style: HomeTxStyle.gStyle16.copyWith(
-                  color: Colors.black.withOpacity(.5),
-                  fontWeight: FontWeight.w700,
+              GetX<NewAppChooseLanguageController>(
+                builder: (c) => TextWidget(
+                  c.state.value.lang == "en" ? service.nameEn : service.nameAr,
+                  maxLines: 2,
+                  softWrap: true,
+                  // padding: 4.padTop,
+                  overflow: TextOverflow.ellipsis,
+                  style: HomeTxStyle.gStyle16.copyWith(
+                    color: Colors.black.withOpacity(.5),
+                    fontWeight: FontWeight.w700,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-                textAlign: TextAlign.center,
               ),
               const SizedBox(),
             ],
